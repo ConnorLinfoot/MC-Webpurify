@@ -70,8 +70,8 @@ public class WebpurifyMessage {
 				isAppropriate = true;
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Blame webpurify because their servers are not responding.");
+			isAppropriate = true;
+			System.out.println("Either your webpurify key is incorrect or webpurify is not responding.");
 		}
 	}
 	
