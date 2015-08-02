@@ -1,6 +1,7 @@
 package me.dexton.messageit_webpurifyaddon;
 
 import me.dexton.messageit_webpurifyaddon.config.Config;
+import me.dexton.messageit_webpurifyaddon.listener.PlayerListener;
 import net.md_5.bungee.api.plugin.Plugin;
 
 public class WebpurifyAddon extends Plugin {
@@ -11,6 +12,7 @@ public class WebpurifyAddon extends Plugin {
 	public void onEnable() {
 		config = new Config(this);
 		config.loadConfig();
+		registerListeners();
 	}
 	
 	@Override
@@ -20,5 +22,9 @@ public class WebpurifyAddon extends Plugin {
 	
 	public Config getConfig() {
 		return config;
+	}
+	
+	private void registerListeners() {
+		getProxy().getPluginManager().registerListener(this, new PlayerListener(this));
 	}
 }

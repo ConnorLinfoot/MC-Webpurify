@@ -2,3 +2,4 @@ main: me.dexton.messageit_webpurifyaddon.WebpurifyAddon
 name: ${project.name}
 version: ${project.version}
 author: [Dexton Anderson]
+softdepend: [MessageIt]
