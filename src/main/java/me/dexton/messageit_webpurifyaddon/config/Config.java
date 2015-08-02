@@ -15,8 +15,9 @@ public class Config {
 	File config;
 	ConfigurationProvider yaml;
 
-	private String webpurifyKey;
-	private boolean enabled;
+	private String webpurifyKey = "key";
+	private boolean enabled = false;
+	private String notAppropriateMessage = "&cMessage not appropriate.";
 
 	public Config(WebpurifyAddon plugin) {
 		this.plugin = plugin;
@@ -54,6 +55,12 @@ public class Config {
 				webpurifyKey = (conf.getString("webpurify-key"));
 				enabled = true;
 			}
+			
+			if(conf.get("not-appropriate-message") == null) {
+				conf.set("not-appropriate-message", "&cMessage not appropriate.");
+			} else {
+				notAppropriateMessage = conf.getString("not-appropriate-message");
+			}
 
 			yaml.save(conf, config);
 		} catch (IOException e) {
@@ -77,5 +84,9 @@ public class Config {
 	
 	public boolean enabled() {
 		return enabled;
+	}
+	
+	public String notAppropriateMessage() {
+		return notAppropriateMessage;
 	}
 }
