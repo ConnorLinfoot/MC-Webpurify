@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>me.dexton</groupId>
-	<artifactId>messageit-webpurifyaddon</artifactId>
-	<version>0.0.1</version>
+	<artifactId>MC-Webpurify</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>MessageIt-WebpurifyAddon</name>
+	<name>MC-Webpurify</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -16,35 +16,18 @@
 
 	<repositories>
 		<repository>
-			<id>bungeecord-repo</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
 	</repositories>
 
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>me.dexton</groupId>
-			<artifactId>messageit</artifactId>
-			<scope>system</scope>
-			<version>0.0.1</version>
-			<systemPath>${basedir}\src\main\resources\messageit-0.0.1.jar</systemPath>
-		</dependency>
-
-		<dependency>
-			<groupId>net.md-5</groupId>
-			<artifactId>bungeecord-api</artifactId>
-			<version>1.8-SNAPSHOT</version>
-			<type>jar</type>
+			<groupId>org.bukkit</groupId>
+			<artifactId>bukkit</artifactId>
+			<version>1.8.8-R0.1-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>

@@ -1,0 +1,4 @@
+main: com.connorlinfoot.mc_webpurify.Webpurify
+name: ${project.name}
+version: ${project.version}
+author: [Connor Linfoot, Dexton Anderson]
